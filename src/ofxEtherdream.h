@@ -14,7 +14,7 @@
 
 class ofxEtherdream : public ofThread {
 public:
-    ofxEtherdream():state(ETHERDREAM_NOTFOUND), bAutoConnect(false) {}
+    ofxEtherdream():state(ETHERDREAM_NOTFOUND), bAutoConnect(true) {}
     
     ~ofxEtherdream() {
         kill();

@@ -4,7 +4,7 @@
 void ofxEtherdream::setup(bool bStartThread, int idEtherdream) {
 
     idEtherdreamConnection = idEtherdream;
-    
+	state = ETHERDREAM_NOTFOUND;
     etherdream_lib_start();
     
     setPPS(30000);
@@ -82,7 +82,7 @@ void ofxEtherdream::threadedFunction() {
 
 //--------------------------------------------------------------
 void ofxEtherdream::start() {
-    startThread(true, false);  // TODO: blocking or nonblocking?
+    startThread();  // TODO: blocking or nonblocking?
 }
 
 //--------------------------------------------------------------
